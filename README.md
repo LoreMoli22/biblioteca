@@ -1,8 +1,5 @@
 # Sistema de Biblioteca
 
-Parcial domiciliario de Algoritmos y estructuras de datos III
-ISFT N° 210 – La Plata
-
 Sistema por consola para registrar libros, socios, préstamos y devoluciones de una biblioteca, desarrollado en Python aplicando Programación Orientada a Objetos.
 
 ## Cómo ejecutarlo
