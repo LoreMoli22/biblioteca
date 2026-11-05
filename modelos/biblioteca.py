@@ -12,7 +12,7 @@ class Biblioteca:
         return self.__nombre
 
     def agregar_libro(self, libro):
-        if self.buscar_libro(libro.get_isbn()) is not None:
+        if self.buscar_libro(libro.get_codigo()) is not None:
             return False
         self.__libros.append(libro)
         return True
@@ -23,9 +23,9 @@ class Biblioteca:
         self.__socios.append(socio)
         return True
 
-    def buscar_libro(self, isbn):
+    def buscar_libro(self, codigo):
         for libro in self.__libros:
-            if libro.get_isbn() == isbn:
+            if libro.get_codigo() == codigo:
                 return libro
         return None
 
@@ -42,9 +42,9 @@ class Biblioteca:
                 resultado.append(libro)
         return resultado
 
-    def prestar(self, numero_socio, isbn):
+    def prestar(self, numero_socio, codigo):
         socio = self.buscar_socio(numero_socio)
-        libro = self.buscar_libro(isbn)
+        libro = self.buscar_libro(codigo)
         if socio is None or libro is None:
             return "Socio o libro inexistente"
         if not libro.esta_disponible():
@@ -53,9 +53,9 @@ class Biblioteca:
         self.__prestamos.append(prestamo)
         return "Prestamo registrado"
 
-    def devolver(self, isbn):
+    def devolver(self, codigo):
         for prestamo in self.__prestamos:
-            if prestamo.esta_activo() and prestamo.get_libro().get_isbn() == isbn:
+            if prestamo.esta_activo() and prestamo.get_libro().get_codigo() == codigo:
                 prestamo.finalizar()
                 return "Devolucion registrada"
         return "Ese libro no tiene un prestamo activo"

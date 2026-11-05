@@ -18,7 +18,7 @@ Datos de acceso:
 - Usuario: `admin`
 - Clave: `1234`
 
-Al iniciar, el sistema ya tiene cargados 3 libros (ISBN 111, 222 y 333) y 2 socios (números 1 y 2) para poder probarlo.
+Al iniciar, el sistema ya tiene cargados 3 libros (códigos 111, 222 y 333) y 2 socios (números 1 y 2) para poder probarlo.
 
 ## Estructura
 

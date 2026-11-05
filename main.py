@@ -26,11 +26,11 @@ def registrar_libro(biblioteca):
     print("=== REGISTRAR LIBRO ===")
     titulo = input("Titulo: ")
     autor = input("Autor: ")
-    isbn = input("ISBN: ")
-    if biblioteca.agregar_libro(Libro(titulo, autor, isbn)):
+    codigo = input("Codigo: ")
+    if biblioteca.agregar_libro(Libro(titulo, autor, codigo)):
         print("Libro registrado")
     else:
-        print("Ya existe un libro con ese ISBN")
+        print("Ya existe un libro con ese codigo")
 
 
 def registrar_socio(biblioteca):
@@ -47,14 +47,14 @@ def registrar_socio(biblioteca):
 def prestar_libro(biblioteca):
     print("=== PRESTAR LIBRO ===")
     numero = input("Nro de socio: ")
-    isbn = input("ISBN: ")
-    print(biblioteca.prestar(numero, isbn))
+    codigo = input("Codigo: ")
+    print(biblioteca.prestar(numero, codigo))
 
 
 def devolver_libro(biblioteca):
     print("=== DEVOLVER LIBRO ===")
-    isbn = input("ISBN: ")
-    print(biblioteca.devolver(isbn))
+    codigo = input("Codigo: ")
+    print(biblioteca.devolver(codigo))
 
 
 def buscar_libro(biblioteca):

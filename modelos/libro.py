@@ -1,15 +1,15 @@
 class Libro:
-    def __init__(self, titulo, autor, isbn):
+    def __init__(self, titulo, autor, codigo):
         self.__titulo = titulo
         self.__autor = autor
-        self.__isbn = isbn
+        self.__codigo = codigo
         self.__disponible = True
 
     def get_titulo(self):
         return self.__titulo
 
-    def get_isbn(self):
-        return self.__isbn
+    def get_codigo(self):
+        return self.__codigo
 
     def esta_disponible(self):
         return self.__disponible
