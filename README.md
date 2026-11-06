@@ -7,13 +7,29 @@ Sistema por consola para registrar libros, socios, préstamos y devoluciones de 
 
 ## Cómo ejecutarlo
 
-Requiere Python 3. No usa librerías externas.
+Requiere Python 3 y Git. No usa librerías externas.
 
-```
-python3 main.py
-```
+### En Linux o Mac
 
-Datos de acceso:
+1. Clonar el repositorio:
+
+    git clone https://github.com/LoreMoli22/biblioteca.git
+
+2. Entrar a la carpeta:
+
+    cd biblioteca
+
+3. Ejecutar el programa:
+
+    python3 main.py
+
+### En Windows, el último paso es `python main.py`.
+
+### Sin Git
+
+Descargar desde el botón verde **Code** → **Download ZIP**, descomprimir, abrir una terminal dentro de la carpeta y ejecutar `python3 main.py` (Linux o Mac) o `python main.py` (Windows)
+
+## Datos de acceso:
 
 - Usuario: `admin`
 - Clave: `1234`
