@@ -76,6 +76,19 @@ def ver_prestamos(biblioteca):
         print(prestamo.mostrar_datos())
 
 
+
+def ver_libros(biblioteca):
+    print("=== LIBROS ===")
+    for libro in biblioteca.get_libros():
+        print(libro.mostrar_datos())
+
+
+def ver_socios(biblioteca):
+    print("=== SOCIOS ===")
+    for socio in biblioteca.get_socios():
+        print(socio.mostrar_datos())
+
+
 def main():
     biblioteca = Biblioteca("Biblioteca Popular")
     bibliotecario = Bibliotecario("Marta", "789", "admin", "1234")
@@ -92,6 +105,9 @@ def main():
         print("4. Devolver libro")
         print("5. Buscar libro")
         print("6. Ver prestamos")
+        print("7. Ver libros")
+        print("8. Ver socios")
+
         print("0. Salir")
         opcion = input("Opcion: ")
 
@@ -107,6 +123,10 @@ def main():
             buscar_libro(biblioteca)
         elif opcion == "6":
             ver_prestamos(biblioteca)
+        elif opcion == "7":
+            ver_libros(biblioteca)
+        elif opcion == "8":
+            ver_socios(biblioteca)
         elif opcion == "0":
             print("Hasta luego")
         else:

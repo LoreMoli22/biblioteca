@@ -63,6 +63,9 @@ class Biblioteca:
     def get_libros(self):
         return self.__libros
 
+    def get_socios(self):
+        return self.__socios
+    
     def get_prestamos_activos(self):
         activos = []
         for prestamo in self.__prestamos:
